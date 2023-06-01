@@ -960,3 +960,58 @@ function testarTrabalho(){
         alert("Carro 1 ganhou a corrida em 1º lugar")
     }
   }
+  function decre(){
+	  var sn = 1
+	  do{
+	  var num = parseInt(prompt("Digite um número que irei subtrair até 0:"));
+	  if(num > 0){
+		  sn = 1
+	  }else{
+		  alert("Por Favor Digite um número acima de 0");
+		  sn = 0
+	  }
+	  }while(sn == 0)
+	  while(num >= 0){
+		  alert(num)
+		  num--
+	  }
+  }
+  function cem(){
+	  var num = parseInt(prompt("Digite um número que irei somar até 100:\n(Se for maior que 100 só irá aparecer na tela)"));
+	  if(num < 100){
+		  do{
+			  alert(num)
+			  num++
+		  }while(num < 101)
+	  }else{
+		  alert(num);
+	  }
+}
+function calcJuro(){
+	var vaMen = parseInt(prompt("Digite o valor mensal que será cobrado em %:"));
+	var valor = parseInt(prompt("Digite o valor da aplicação inicial: "));
+	var anos = parseInt(prompt("Por quantos anos irá pagar?"));
+	vaMen /= 100;
+
+	for(var x = 1; x<anos+1; x++){
+		alert(x+"ª ano pagando\nValor atual dos juros:"+(valor * x))
+		valor *= vaMen
+		valor *= 12		
+	}
+}
+function senha(){
+	var num = parseInt((Math.random())*10)
+	var sn = 1
+	alert(num)
+	do{
+		var pass = parseInt(prompt("Digite um número de 1-9: "))
+		if(pass == num){
+			alert("Acertou!");
+			sn = 0
+		}else{
+			alert("Errou, Tente novamente");
+			sn = 1
+		}
+	}while(sn == 1)
+	
+}
